@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>[남소영] WINE TAKE OUT SHOP</title>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="css/jquery.bxslider_03.css">
+
+<link rel="stylesheet" type="text/css" href="css/style_03.css">
+<link rel="shortcut icon" type="image/x-icon" href="./images/li_favicon_3.png" />
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js"></script>-->
+
+<script>
+
+$(function(){
+$("#wrapper").animate({opacity:0.9},1200);
+});	
+
+$(function() {
+        $('.slide_gallery').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true
+        });
+    });
+
+</script>
+
+<style>
+
+
+hr { margin-top: 15px;}
+
+
+#content_03 {
+                     width:1000px;
+                     /*height:500px;*/
+  }
+
+
+  .shop_name {
+                     width:1000px;
+                     height:60px;
+                     margin-top: 50px;
+                     text-align: center;
+                     line-height: 60px;
+                     font-size: 30px;
+                     font-weight: bold;
+                     letter-spacing: 3px;
+  }
+
+  #content_03::after { content:""; display: block; clear: both;}
+
+  .shop_pic { 
+                 width: 500px;
+                 height: 600px;
+                 float:left;
+                 margin-top: 50px;
+  }
+
+  .shop_pic img {
+                  margin-left: 80px;
+  }
+
+#right_content { 
+                float:right; 
+              }
+
+ .address {
+                width: 480px;
+                height: 70px;
+                line-height: 30px;
+                margin-top: 50px;
+                font-size: 16px;
+                padding-top: 230px;
+                margin-left: 20px;
+  }
+
+ .map {
+           width: 440px;
+           margin-left: 20px;
+ } 
+
+ .map iframe{
+         width: 420px;
+         height: 300px;
+    }
+
+ .under_content {
+                        width:1000px;
+                        height: 280px;
+                        margin-top: 70px;
+                        margin-left: 20px;
+                        margin-bottom: -40px;
+ }
+
+ .open_hour {
+                   float:left;
+                   width:300px;
+                   height: 250px;
+                   font-size: 20px;
+                   margin-left: 80px;
+ }
+
+ .yoil {
+                   float:left;
+                   width:100px;
+                   font-size: 18px;
+                   line-height: 30px;
+
+ }
+
+ .time {
+                   float:right;
+                   width:200px;
+                   font-size: 18px;
+                   line-height: 30px;
+ }
+
+ .open_hour span { 
+                         color:rgb(255, 70, 70);
+                         font-weight: bold;
+ }
+
+ .icon_03 {
+                   float:right;
+                   margin-right: 100px;
+                   margin-top:160px;
+ }
+
+ .icon_03 img { 
+                margin-right: 20px;
+                transition: 1s;
+              }
+
+ .icon_03 img:hover { 
+                      opacity: 0.5;
+                      transition: 0.5s;
+                      cursor: pointer;
+ }
+  
+</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<header>
+
+  <div id="logo"><h1><a href="index.html"><img src="images/li_mainlogo.png" width="120" alt="로고"></a></h1></div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="sub_01.html">BRAND</a></li>
+      <li><a href="sub_02.html">WINE</a></li>
+      <li><a href="sub_03.html">SHOP</a></li>
+
+    </ul>
+	<p class="utility">
+    <a href="sub_04.html">LOGIN</a><span>|</span>
+    <a href="sub_05.html">JOIN</a><span>|</span>
+    <a href="sub_04.html">MY PAGE</a>
+	</p>
+
+  <div class="takeout">
+    <p><a href="index.html">WINE TAKE OUT SHOP</a></p>
+ </div>
+ 
+   </nav>
+
+   <div id="search">
+    <span class="blue_window">
+    <input id="query" name="query" type="text" title="검색어 입력" 
+    class="input_text" placeholder="검색어를 입력하세요" maxlength="20" tabindex="1" accesskey="s" onclick="document.getElementById('fbm').value=1;" />
+    </span>
+    <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><input type="image" alt="검색" src="./images/li_search_btn.png" height="15" class="btn"/></a>
+   </div>
+
+</header>
+
+<!--------------------------갱신해야하는 컨텐츠들------------------------------>
+
+<hr width="1000" color="#000" noshade/>
+
+<section id="content_03">
+
+    <div class="shop_name">
+      <p>LITTLE WINE in YEONNAM</p>
+    </div>
+   
+    <div class="shop_pic">
+      <img src="./images/li_store.png" width="400" alt="스토어">
+    </div>
+
+    <div id="right_content">
+        <div class="address">
+          서울 마포구 성미산로23길 68 ( 가상의 주소 )<br>
+          68, Seongmisan-ro 23-gil, Mapo-gu, Seoul, Republic of Korea
+        </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.5253260734676!2d126.9176872152698!3d37.56624577979785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98e5a55051ab%3A0xe6b44e872a76ddf1!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDshLHrr7jsgrDroZwyM-q4uCA2OA!5e0!3m2!1sko!2skr!4v1650967569826!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div><!--right_content end-->
+</section> <!--content_03 end-->
+
+  <div class="under_content">
+    <div class="open_hour">
+      <div class="yoil">
+      SUN<br>
+      MON<br>
+      TUE <br>
+      WED <br>
+      THU<br>
+      FRI <br>
+      SAT
+      </div><!--yoil end-->
+      <div class="time">
+      12 : 00 - 24 : 00<br>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OFF</span><br>
+      12 : 00 - 22 : 00<br>
+      12 : 00 - 22 : 00<br>
+      12 : 00 - 22 : 00<br>
+      12 : 00 - 24 : 00<br>
+      12 : 00 - 24 : 00
+      </div><!--time end-->
+    </div><!--open_hour end-->
+
+    <div class="icon_03">
+      <a href="javascript:alert('이 사이트는 프로토 타입 디자인 시안입니다.');"><img src="./images/icon_10.png" alt="아이콘1"></a>
+      <a href="javascript:alert('이 사이트는 프로토 타입 디자인 시안입니다.');"><img src="./images/icon_11.png" alt="아이콘2"></a>
+      <a href="javascript:alert('이 사이트는 프로토 타입 디자인 시안입니다.');"><img src="./images/icon_12.png" alt="아이콘3"></a>
+      <a href="javascript:alert('이 사이트는 프로토 타입 디자인 시안입니다.');"><img src="./images/icon_13.png" alt="아이콘4"></a>
+      <a href="javascript:alert('이 사이트는 프로토 타입 디자인 시안입니다.');"><img src="./images/icon_14.png" alt="아이콘5"></a>
+    </div><!--icon_03 end-->
+  </div><!--under_content end-->
+
+
+<!--------------------------footer------------------------------>
+<footer>
+	  <p>
+      상호명 : 리틀 와인 ｜ 서울특별시 강서구 공항대로 00길 00로 000-000<br>
+      대표 : 남소영 ｜ 사업자 등록번호 : 111-22-333333｜ 통신판매 신고번호 : 제 2018-서울강서-0000호｜ 개인정보 보호책임자 : 남소영<br>
+      Tel : 070-1234-5678｜ Fax : 02-1234-5678｜ e-mail : littlewine@abcd.com<br><br>
+      Copyright &copy; NamSoYoung. All Rights Reserved.
+	  </p>
+</footer>
+
+<aside class="quick">
+  <p><a href="javascript:;" onclick="kakao();"><img src="./images/icon_15.png" width="100"></a></p>
+</aside>
+
+</div><!--wrapper end-->
+
+<script>
+
+  function kakao() {
+  
+      window.open("https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_EDxilj%2Fchat%3Fapi_ver%3D1.0%26kakao_agent%3Dsdk%252F1.41.5%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fyournakedcheese.com%26app_key%3D822688d7c13605df94ee677055fcbc22%26referer%3Dhttps%253A%252F%252Fyournakedcheese.com%252Fgift" , 'window', 'width=500, height=600, menubar=no, status=no, top=200, left=710 toolbar=no');  
+  }
+  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+  <title>자동차 견적서 ( Car Estimate ) - 프로토타입 제작</title>
+  <meta charset="UTF-8">
+
+  <style>
+
+   @font-face {              
+                         font-family:"my_font1";
+                         src:local("my_font1"),
+                         url("./font/AppleSDGothicNeoM.ttf") format("truetype");
+   }
+
+   * {  margin:0;  padding:0;  }
+
+   body { 
+              /*font-family: my_font1;*/
+              font:12px/1.5 "my_font1";
+              background-color: rgb(255, 255, 255);
+   }
+
+   h1, #container, .k {
+                             box-sizing: border-box;
+   }
+
+   h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgb(244, 241, 207);
+   }
+
+   #container {
+                      width:820px;
+                      margin:0 auto;
+                      /*background-color: blueviolet;*/
+                      text-align: center;
+   }
+
+   .k { 
+          width: 400px;
+          border:2px solid #bbb;
+          display: inline-block;
+          background-color: #fff;
+          margin:5px 4px 5px 4px;
+   }
+
+   .k img {
+               width: 394px;
+               transition: 1.2s;
+   }
+
+   .k img:hover {
+                       transform: scale(0.9);
+                       transition:1.5s;
+                       opacity: 0.8;
+   }
+
+
+  </style>
+
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"> </script> 
+  <script type="text/javascript" src="./js/jquery-migrate-1.4.1.js"> </script> 
+
+</head>
+
+<body>
+
+  <section id="container">
+
+        <h1> 자동차 견적 금액 알아보기 - 차종을 선택하세요 </h1>
+
+        <div class="k k1">
+          <p>
+              <a href="#" onclick="window.open('bmw1.html','White','width=630, height=640, left=150px, top=150, location=no, status=no, toolbar=no, scrollbars=no;')">
+                <img src="./img/bmw_1.png" alt="white">
+              </a>
+          </p>
+        </div>
+
+        <div class="k k2">
+          <p>
+            <a href="#" onclick="window.open('bmw2.html','Blue','width=630, height=640, left=150px, top=150, location=no, status=no, toolbar=no, scrollbars=no;')">
+            <img src="./img/bmw_2.png" alt="blue">
+          </a>
+          </p>
+        </div>
+
+        <div class="k k3">
+          <p>
+            <a href="#" onclick="window.open('bmw3.html','Green','width=630, height=640, left=150px, top=150, location=no, status=no, toolbar=no, scrollbars=no;')">
+            <img src="./img/bmw_3.png" alt="green">
+          </a>
+          </p>
+        </div>
+
+        <div class="k k4">
+          <p>
+            <a href="#" onclick="window.open('bmw4.html','Red','width=630, height=640, left=150px, top=150, location=no, status=no, toolbar=no, scrollbars=no;')">
+             <img src="./img/bmw_4.png" alt="red">
+            </a>
+          </p>
+        </div>
+
+  </section>
+
+
+</body>
+</html>

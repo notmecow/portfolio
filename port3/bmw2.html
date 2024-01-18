@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+  <title>BMW 미니 견적서 ( Island Blue ) - 프로토타입 제작</title>
+  <meta charset="UTF-8">
+
+  <style>
+
+   @font-face {              
+                         font-family:"my_font1";
+                         src:local("my_font1"),
+                         url("./font/AppleSDGothicNeoM.ttf") format("truetype");
+   }
+
+   * {  margin:0;  padding:0;  }
+
+   body { 
+              font:14px/1.5 "my_font1";
+              background-color: #eee;
+   }
+
+
+   h1, #car_zone, #car_zone p, #car_table, #car_table tr, #car_table th, #car_table td, #total {
+                                                                                                                            box-sizing: border-box;
+   }
+
+   h1 {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+   }
+  
+   #color p {
+                  background-color: #aeccdb;
+                  font-size: 18px;
+                  letter-spacing: 2px;
+                  font-weight: bold;
+                  padding:2px;
+                  border: 1px solid #00000046;
+   }
+
+   #color a { 
+                  text-decoration: none;
+   }
+   #color a:hover {
+                          cursor: pointer;
+                          opacity: 0.5;
+   }
+
+   #color .down_1 {
+                       margin-bottom: -4px;
+                       margin-right: 10px;
+   }
+
+   #color .down_2 {
+                       margin-bottom: -4px;
+                       margin-left: 10px;
+   }
+
+   #colors {
+                  border: 1px solid #00000046;
+                  display:none;
+   }
+   #colors span img {
+                             margin:5px 8px 2px 8px;
+   }
+
+   #car_zone {
+                    width: 620px;
+                    margin:0 auto;
+                    text-align: center;
+                    background-color:#fff;
+                    padding:10px;
+   }
+
+   #car_table {
+                     width: 100%;
+                     border-collapse: collapse;
+   }
+
+   #car_table th,td {
+                           border: 1px solid #00000046;
+                           height: 25px;
+   }
+
+   #car_table th {
+                         background-color: #aeccdb;
+                         font-size: 15px;
+                         letter-spacing: 2px;
+                         color:#222;
+   }
+
+   thead th { padding-top: 4px;}
+
+   #total {
+              background-color: #aeccdb;
+              font-size: 1.4em;
+              font-weight: bold;
+              color:#000000;
+              text-align: center;
+              border:none;
+   }
+
+   tfoot {
+               font-size: 15px;
+               font-weight: bold;       
+   }
+
+   tfoot td {
+                 background-color:#aeccdb;
+   }
+
+   #car_zone p img {
+                          transition: 1s;
+   }
+   
+   #car_zone p img:hover {
+                                    transform: scale(0.9);
+                                    transition: 1.2s;
+                                    opacity: 0.8;
+   }
+
+  </style>
+
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"> </script> 
+  <script type="text/javascript" src="./js/jquery-migrate-1.4.1.js"> </script> 
+
+  <script>
+
+    $(document).ready(function(){
+
+      $(".show_color").css("cursor","pointer").click(function(){
+          $("#colors").slideToggle(500);
+      });
+
+      });
+
+</script>
+
+</head>
+
+<body>
+
+  <section id="car_zone">
+
+        <h1>Island Blue</h1>
+
+        <p>
+            <a href="#">
+                <img src="./img/bmw_2.png" alt="bmw2">
+            </a> 
+        </p>
+
+        <div id="color">
+
+            <p class="show_color">
+                <img class="down_1"src="./img/down.png" width="20" alt="다운버튼">   
+                <span>COLOR</span>
+                <img class="down_2" src="./img/down.png" width="20" alt="다운버튼">             
+            </p><!--show_color end-->
+
+            <div id="colors">
+                <a href="./bmw1.html" >
+                <span>
+                    <img src="./img/color_1.png" width="30" alt="색상1">
+                </span>
+                </a>
+
+                <a href="./bmw2.html" >
+                    <span>
+                     <img src="./img/color_2.png" width="30" alt="색상2">
+                    </span>
+                    </a>
+                    
+               <a href="./bmw3.html" >
+                <span>
+                    <img src="./img/color_3.png" width="30" alt="색상3">
+                </span>
+                </a>
+
+                <a href="./bmw4.html" >
+                <span>
+                    <img src="./img/color_4.png" width="30" alt="색상4">
+                </span>
+                </a>               
+            </div><!--colors end-->
+
+        </div><!--#color end-->
+
+        <table id="car_table">
+
+            <colgroup>
+               <col width="380px">
+               <col width="160px">
+               <col width="*">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>OPTION</th>
+                    <th>PRICE</th>
+                    <th>CHECK</th>
+                </tr>
+            </thead>
+
+            <tfoot>
+                <th>TOTAL PRICE</th>
+                <td colspan="2">
+                    <input type="text" name="total" id="total" value="30000000" readonly="readonly">
+                                                                             <!--차량 기본 가격 ( 옵션 선택 전 )-->
+                </td>
+            </tfoot>
+
+            <tbody>
+                <tr>
+                    <td><label for="opt_1">가죽 시트</label></td>
+                    <td>450,000</td>
+                    <td><input type="checkbox" name="opt_1" id="opt_1" value="450000" onclick="car();"></td>
+                                                                                        <!--onclick 이벤트로 car(); 사용자 정의 함수 호출-->
+                </tr>
+
+                <tr>
+                    <td><label for="opt_2">네비게이션</label></td>
+                    <td>550,000</td>
+                    <td><input type="checkbox" name="opt_2" id="opt_2" value="550000" onclick="car();"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="opt_3">선루프</label></td>
+                    <td>700,000</td>
+                    <td><input type="checkbox" name="opt_3" id="opt_3" value="700000" onclick="car();"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="opt_4">ABS</label></td>
+                    <td>860,000</td>
+                    <td><input type="checkbox" name="opt_4" id="opt_4" value="860000" onclick="car();"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="opt_5">블랙 박스</label></td>
+                    <td>350,000</td>
+                    <td><input type="checkbox" name="opt_5" id="opt_5" value="350000" onclick="car();"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="opt_6">보조 범퍼</label></td>
+                    <td>670,000</td>
+                    <td><input type="checkbox" name="opt_6" id="opt_6" value="670000" onclick="car();"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+  </section>
+
+  <script>
+
+        function car() { //자바스크립트 사용자 정의 함수 선언 car();
+
+            let basic_car=Number(document.getElementById("total").defaultValue);
+            //DOM 스크립트 ( 원거리 선택자 ) id명으로 선택해서 basic_car 변수에 차량 기본 가격 대입
+
+               for( let i=1; i<=6; i++ ) { // for 반복문 3회전
+                         const chkObj=document.getElementById("opt_"+i);
+                                 if ( chkObj.checked) {  //체크한 옵션의 가격을 차량 기본 가격에 누적하여 더함
+                                        basic_car += Number(chkObj.value);
+                                 }
+               }
+
+               document.getElementById("total").value=basic_car+"원";
+               //선택한 옵션들의 가격을 기본가격에 보두 더한 최종 견적 금액을 화면에 표시      
+        }
+
+        car();
+
+        /* 
+        [ 자바스크립트 표준 스펙 ECMA Script 6 == ES6 ]
+        변수 선언 예약어 let 변수 재선언 ( 중복 선언 ) 불가능 , 재할당 ( let 예약어 생략 ) 가능  
+        변수 선언 예약어 const 변수 재선언 ( 중복 선언 ) , 재할당 모두 불가능
+        const는 상수변수로 변수 선언시 반드시 변수 초기화 할당값이 대입되어야 한다
+        */
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+@font-face {              
+    font-family:"my_font1";
+    src:local("my_font1"),
+    url("../font/AppleSDGothicNeoM.ttf") format("truetype");
+  }
+
+  div, article, section, aside {box-sizing: border-box;}
+
+#wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+body {
+  font: 14px my_font1;
+  color: #424242;
+}
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #aaa;
+  transition: 0.2s;
+}
+
+
+header ul { 
+            position: absolute;
+            bottom:-5px;
+            left:0;
+}
+
+header ul li {
+             list-style-type: none;
+             display: inline-block;
+             font-size: 18px;
+             margin-right:70px;
+             font-weight: bold;
+}
+
+header ul li a:hover {
+                     color:#721a53;
+                     transition: all 0.5s;
+}
+
+
+header {
+  height: 160px;
+  position:relative; /* .utility 부모 선언, position:absolute; */
+}
+
+
+.utility { 
+         position:absolute; 
+         right:26px; 
+         top:0px; 
+       }
+
+.utility a {
+  font-size:16px;
+  color: #aaa;
+}
+
+.utility span { margin:0 15px;
+
+}
+
+.utility a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+header h1 {
+  position: absolute;
+  top:10px;
+  left:50%;
+  margin-left:-70px;
+  perspective:200px; /* 아래소스 로고 이미지 회전시, 원근감(깊이) 효과 */
+}
+
+header h1 img:hover {
+   transform:rotateX(30deg); /* 메인 로고 이미지 30도 회전 */
+   transition:2s;
+}
+
+header h1 img{
+   transition:2s;
+}
+
+#search {
+       position: absolute;
+       right:10px;
+       bottom:9px;
+}
+
+
+#search .blue_window{
+                      display:inline-block;
+                      width:350px;
+                      height:29px;    
+                      background-color:#ededed;
+                      border-radius: 20px;
+                      margin-top: 5px;
+}
+
+#search .input_text {
+                 width:325px;
+                 height:17px;
+                 line-height: 16px;
+                 margin:5px 0 0 6px;
+                 padding-left:10px;
+                 border:0 none;
+                 font-size:14px;
+                 background-color:#ededed;
+                 color:rgb(97, 97, 97);
+                 outline:none
+}
+
+#search .btn { 
+               position:absolute;
+               bottom:7px;
+               right:12px;
+}
+
+
+
+.sub_title {
+	background:url("https://t1.daumcdn.net/cfile/tistory/13384F4A4E587D5844") no-repeat left 9px;
+	padding: 0 0 0 20px;
+	font-size:20px;
+	color:#fff;
+	text-shadow:2px 2px 3px #383D3B;
+}
+
+
+section {
+  width: 620px;
+  float: left;
+}
+
+article {
+  margin:0px;
+  padding: 10px 15px;
+  line-height: 1.7em;
+}
+
+
+
+footer {
+  clear:both;
+  background:#ededed;
+  position:relative; /* .draft 부모 선언, position:absolute; */
+}
+
+footer p {
+  text-align: center;
+  line-height: 1.5em;
+  color:#616161;
+  padding:10px;
+}
+
+.draft { position:absolute; right:10px; bottom:10px; } /* 또 다른(첫 번째), Pet UI 디자인 시안 */
+
+.draft a {
+  font-size:11px;
+  text-decoration: none;
+  color: #aaa;
+}
+
+.draft a:hover {
+  color: #ffab91;
+  transition: 0.2s;
+}
+

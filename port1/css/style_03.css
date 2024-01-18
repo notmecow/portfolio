@@ -1,0 +1,240 @@
+
+/*******************************폰트*******************************/
+
+@font-face {              
+    font-family:"my_font1";
+    src:local("my_font1"),
+    url("../font/AppleSDGothicNeoM.ttf") format("truetype");
+  }
+
+  
+@font-face {              
+  font-family:"my_font2";
+  src:local("my_font2"),
+  url("../font/AlfaSlabOne-Regular.ttf") format("truetype");
+}
+
+
+/*******************************박스 사이징*******************************/
+  
+/*div, article, section, aside {box-sizing: border-box;}*/
+
+/*******************************기본 설정*******************************/
+
+#wrapper {
+  width: 1000px;
+  /*height: 1230px;*/
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+  font: 14px my_font1;
+  color: #424242;
+}
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #aaa;
+  transition: 0.2s;
+}
+
+/*******************************header*******************************/
+
+header {
+    height: 160px;
+    position:relative; /* .utility 부모 선언, position:absolute; */
+}
+
+/*******************************header_메인 로고*******************************/
+
+header h1 {
+    position: absolute;
+    top:10px;
+    left:50%;
+    margin-left:-40px;
+}
+
+  
+header h1 img {
+                  transition:0.2s;
+}
+  
+header h1 img:hover{
+                      transition:0.2s;
+                      /*animation: rotate 0.8s linear infinite  alternate; */
+                      width:130px;
+                    }
+
+ /*@keyframes rotate {
+                        from { transform: rotate(-3deg); }        
+                         to { transform: rotate(3deg); }
+                    }*/
+
+  
+
+/*******************************header_테이크아웃 로고*******************************/
+
+header .takeout p a {
+                            width:200px;
+                            height:22px;
+                            font-size:15px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            padding-top: 6px;
+                            text-align: center;
+                            color:rgb(80, 80, 80);
+                            border-radius: 10px;
+                            position: absolute;
+                            top:16px;
+                            left:0;
+                            transition: 1.2s;
+          }
+header .takeout p a:hover { 
+                                      color:#a02120;
+                                      transition:  0.5s;
+                                    }                          
+
+/*******************************header_상단 메뉴*******************************/
+
+header ul { 
+            position: absolute;
+            bottom:-15px;
+            left:-20px;
+}
+
+header ul li {
+             list-style-type: none;
+             display: inline-block;
+             font-size: 18px;
+             margin-right:70px;
+             font-weight: bold;
+             letter-spacing: 4px;
+}
+
+header ul li a:hover {
+                     color:#721a53;
+                     transition: all 0.5s;
+}
+
+/*******************************header_유틸리티 메뉴*******************************/
+
+.utility { 
+         position:absolute; 
+         right:26px; 
+         top:0;
+       }
+
+.utility a {
+  font-size:13px;
+  color: #aaa;
+  letter-spacing: 4px;
+}
+
+.utility span {
+       margin:0 15px;
+       color: #aaa;
+}
+
+.utility a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+/*******************************header_검색창*******************************/
+
+#search {
+       position: absolute;
+       right:10px;
+       bottom:0px;
+}
+
+#search .blue_window{
+                      display:inline-block;
+                      width:350px;
+                      height:29px;    
+                      background-color:#ededed;
+                      border-radius: 20px;
+                      margin-top: 5px;
+}
+
+#search .input_text {
+                 width:325px;
+                 height:17px;
+                 line-height: 16px;
+                 margin:4px 0 0 6px;
+                 padding-top: 2px;
+                 padding-left:10px;
+                 border:0 none;
+                 font-size:14px;
+                 font-family: my_font1;
+                 background-color:#ededed;
+                 color:rgb(97, 97, 97);
+                 outline:none
+}
+
+#search .btn { 
+               position:absolute;
+               bottom:7px;
+               right:12px;
+}
+
+/*******************************SIDE*******************************/
+
+/*
+.quick {
+            position:absolute;
+            top: 200px;
+            left: 1030px;
+}
+*/
+
+.quick {
+           position:fixed;
+           top:200px;
+           left:50%;
+           margin-left:530px;
+           transition:1s;
+}
+
+.quick:hover {
+                   opacity: 0.7;
+                   transition: 0.5s;
+                   cursor: pointer;
+}
+/*******************************footer*******************************/
+
+footer {
+  clear:both;
+  background:#ededed;
+  position:relative; /* .draft 부모 선언, position:absolute; */
+}
+
+footer p {
+  text-align: center;
+  line-height: 1.5em;
+  color:#616161;
+  padding:10px;
+}
+
+/************************************또 다른 디자인 시안**************************/
+
+.draft { position:absolute; right:10px; bottom:10px; } /* 또 다른(첫 번째), Pet UI 디자인 시안 */
+
+.draft a {
+  font-size:11px;
+  text-decoration: none;
+  color: #aaa;
+}
+
+.draft a:hover {
+  color: #ffab91;
+  transition: 0.2s;
+}
+

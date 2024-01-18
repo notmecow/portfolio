@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <title>남소영 - CSS 박스 모델링 프로토타입 웹페이지 시안</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="안녕하세요 남소영 프로토타입 포트폴리오입니다">
+
+  <meta name="viewport" content="width=550, initial-scale=1">
+
+  <link rel="stylesheet" href="css/jquery.flipster.min.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.flipster.min.js"></script>
+
+
+  <style>
+
+   @font-face {              
+    font-family:"my_font2";
+    src:local("my_font2"),
+    url("./++backup/my_fonts/AppleSDGothicNeoM.ttf") format("truetype");
+    }
+
+      * { margin : 0; padding :0; }
+
+      body { 
+                font:14px/1.5 "my_font2";
+                color:#222;
+               }
+
+     @font-face {              
+                  font-family:"my_font1";
+                  src:local("my_font1"),
+                  url("./++backup/my_fonts/Dongle-Regular.ttf") format("truetype");
+      }
+    
+
+     li { list-style-type : none; }    
+     
+     a {
+          color:#222;
+          text-decoration: none;
+        }
+
+    #header, #container, #content, #aside, #footer,#gnb_box {  box-sizing: border-box; }    
+
+    /************reset.css**************/
+    
+     #wrapper {
+                    width:1200px;
+                    margin:0 auto;
+                    height:900px;
+                    /*background-color: yellow;*/
+                    position:relative;
+     }
+
+     #header {
+                   width:1200px;
+                   height :100px;
+                   border:4px solid #fff;
+                   /*background-color: cyan;*/
+                   position:relative;
+                   z-index: 999;
+     }
+
+     /************유틸 메뉴 화면 우층 상단*************/
+
+     .utility_menu li {
+                        display:inline;
+     }
+
+     .utility_menu {    
+                         position:absolute;
+                         left:860px;
+                         top:10px;
+                         /*background-color: yellow;*/
+                
+                         padding-left:14px;
+     }
+
+     .utility_menu li a { color:#999;}
+     .utility_menu li a:hover { color:/*#19aad1;*/#ffcc4c;}
+
+     /*******************로고 자리*********************/
+
+     h1 {
+           float:left;
+           width:240px;
+           height:87px;
+           text-align:center;
+           /*background-color: lime;*/
+           margin-top:7px;
+     }
+
+     /*******************검색창*********************/
+
+     #search{
+                 position:absolute;
+                 top:5px;
+                 left:260px;
+                 z-index:1;
+                 width:612px;
+   	}
+
+     #search .blue_window{
+	                               display:inline-block;
+	                               width:388px;     /*_width :372px; */
+	                               height:29px;      /*_height :40px */;
+	                               border:4px solid #19aad1;
+	                               background-color:#fff;
+                                   margin-top: 5px;
+	}
+       
+     #search .input_text {
+	                          width:373px;
+                              height:17px;
+                              line-height: 16px;
+                              margin:5px 0 0 6px;
+                              border:0 none;
+                              font-weight:bold;
+                              font-size:14px;
+                              color:rgb(97, 97, 97);
+	                          outline:none
+     }
+
+     #search .btn {
+                        margin-left:-4px;
+                        margin-top: 5px;
+                        position:relative;
+                        vertical-align:top;
+                        z-index:10;
+     } 
+
+     /***************************GNB***************************/
+
+     #gnb_box { 
+                    float:left;
+                    width:952px;
+                    height:72px;
+                    /*background-color: gold;*/
+                    padding-left:20px;
+                    padding-top:28px;
+                    margin-top:20px;
+     }
+
+
+     .menu,.menu ul,.menu li,.menu a {
+	                                             margin: 0;
+                                                 padding: 0;
+                                                 border: none;
+                                                 outline: none;
+     }
+     /********************로그인창***********************/
+    
+     .login {
+             width:324px;
+             border:4px solid #fff;
+             background-color: #fff;
+             height:210px;
+     }
+
+     #login_btn a  {
+                   font-size: 16px;
+                   color:#fff;
+                   padding: 7px 129.5px 7px 129.5px;
+                   margin-top:15px;
+                   margin-left:13px;
+                   border-radius: 20px;
+                   background-color:#19aad1;
+                   border: none;
+      }
+
+      #login_btn a:hover  {
+                  background-color:#ffcc4c;
+      }
+
+
+     #user_id {
+               width:280px;
+               height:35px;
+               margin-top: 10px;
+               margin-left:13px;
+               border-radius: 20px;
+               background-color:#eeeded;
+               border: none;
+               padding-left:20px;
+     }
+
+     #user_number {
+                     width:280px;
+                     height:35px;
+                     margin-top:10px;
+                     margin-left:13px;
+                     margin-bottom:16px;
+                     border-radius: 20px;
+                     background-color:#eeeded;
+                     border: none;
+                     padding-left:20px;
+     }
+
+     #login_box {
+                  margin-left:13px;
+      }
+
+     #login_ch { 
+                margin-top:19px;
+                margin-left:15px;
+     }
+
+     #login_ch2 {
+                 margin-left:5px;
+                 margin-top:5px;
+     }
+
+     .id_under {
+                margin-left:19px;
+                margin-top:10px;
+     }
+
+     #id_2 a:hover {
+                    font-weight: bold;
+                    color:#ffcc4c;
+     }
+
+     #number_2 a:hover {
+                          font-weight: bold;
+                          color:#ffcc4c;
+     }
+
+     #member a:hover {
+                        font-weight: bold;
+                        color:#ffcc4c;
+     }
+     
+     /******************** Menu *********************/
+
+
+     .menu {	
+	            height: 40px;
+                width: 623px;
+                /*background: -webkit-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: -moz-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: -o-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: -ms-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);*/
+                background-color: #ffcc4c;
+               /* -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 10px;*/
+                margin-top:5px;
+
+               }    
+
+     .menu li {
+	             position: relative;
+	             list-style: none;
+                 float: left;
+                 display: block;
+                 height: 40px; 
+               }
+
+    /***************** Links ******************/
+
+     .menu li a {
+	                 display: block;
+                     padding: 0px 22px;
+                     margin: 6px 0;
+                     line-height: 28px;
+                     text-decoration: none;
+                     border-left: 1px solid #ffffff;
+                     border-right: 1px solid #ffffff;
+                     font-family: /*Helvetica, Arial, sans-serif;*/my_font1;
+                    /* font-weight: bold;*/
+                     font-size: /*13px;*/23px;
+                     color: #fff;
+                     -webkit-transition: color .2s ease-in-out;
+                     -moz-transition: color .2s ease-in-out;
+                     -o-transition: color .2s ease-in-out;
+                     -ms-transition: color .2s ease-in-out;
+                     transition: color .2s ease-in-out;
+                   }
+
+     .menu li:first-child a { border-left: none; }
+     .menu li:last-child a{ border-right: none; }
+     .menu li:hover > a { color: #19aad1; }
+
+    /*******************Sub Menu ******************/
+
+      .menu ul {
+	               position: absolute;
+	               top: 40px;
+                   left: 0px;
+                   opacity: 0;
+                   background: #ffcc4c;
+                   -webkit-border-radius: 0 0 5px 5px;
+                   -moz-border-radius: 0 0 5px 5px;
+                   border-radius: 0 0 5px 5px;
+                   -webkit-transition: opacity .25s ease .1s;
+                   -moz-transition: opacity .25s ease .1s;
+                   -o-transition: opacity .25s ease .1s;
+                   -ms-transition: opacity .25s ease .1s;
+                   transition: opacity .25s ease .1s;
+                   }   
+
+     .menu li:hover > ul { opacity: 1; }
+
+     .menu ul li {
+                      height: 0;
+                      overflow: hidden;
+                      padding: 0;
+                      -webkit-transition: height .25s ease .1s;
+                      -moz-transition: height .25s ease .1s;
+                      -o-transition: height .25s ease .1s;
+                      -ms-transition: height .25s ease .1s;
+                      transition: height .25s ease .1s;
+                    }
+
+     .menu li:hover > ul li {
+                                   height: 36px;
+                                   overflow: visible;
+                                   padding: 0;
+                                  }
+
+     .menu ul li a {
+                    	width: 100px;
+                        padding: 4px 0 4px 40px;
+                        margin: 0;
+                        border: none;
+                        /*border-bottom: 2px solid #ffffff;*/
+                        color:#fff;
+                       }
+      
+    .menu ul li a:hover {
+                        color:#fff;
+                        opacity: 0.5;
+                       }                  
+
+
+     .menu ul li:last-child a { border: none; }
+
+     /**********************Icons*********************** */
+
+     .menu a.documents { background: url(./images/icon_01.png)  no-repeat 6px center; background-size: 25px 25px; }
+     .menu a.setting { background: url(./images/icon_02.png) no-repeat 6px center; background-size: 25px 25px; }
+     .menu a.sharing { background: url(./images/icon_03.png)  no-repeat 6px center; background-size: 25px 25px; }
+ 
+
+     /***********************옆 파란 메뉴***************************/
+
+     .menu_box {
+                       display:block;
+                       transition: 1.2s;
+                       position:absolute; top:0px; left:-150px;
+                       /*font-family: Helvetica, Arial, "Lucida Grande", sans-serif;*/
+                       font-size: 13px;
+                       letter-spacing: 3px;
+                       line-height: 1.5;
+                       margin: 0px auto;
+                       width: 140px;
+                       box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                     }
+
+    /* .menu_box:hover { 
+                              opacity: 0.9; 
+                              transition: 1.5s;
+                            }*/              
+
+     .menu-item {
+                      background: #fff;
+                      width:140px; 
+                    }
+
+     /*Menu Header Styles*/
+     .menu-item h3 {
+                           border-bottom: 1px solid rgba(0,0,0,0.3);
+                           border-top: 1px solid rgba(255,255,255,0.2);
+                           color: #fff;
+                           font-size: 15px;
+                           font-weight: 500;
+                           padding: 7px 12px;
+    /* *Gradient*
+                           background: #a90329; * Old browsers *
+                           background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); * W3C *
+                           background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); * 삭제 금지 *
+                           background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); * IE10+ 삭제 금지 */
+                           background-color: #19aad1;
+                           }
+
+     .menu-item h3:hover {  
+                                     background: #ffcc3c; /* Old browsers */
+                                    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc002c), color-stop(100%,#6d0019)); * Chrome,Safari4+ *
+                                     background: -ms-linear-gradient(top,  #cc002c 0%,#6d0019 100%); * IE10+ *
+                                      background: linear-gradient(top,  #cc002c 0%,#6d0019 100%); * W3C */
+                                  }
+
+     .menu-item h3 a {
+                              color: white;
+                              display: block;
+                              text-decoration: none;
+                              width: 140px;
+                             }
+
+     /*ul Styles*/
+     .menu-item ul {
+                            background: #fff;
+                            font-size: 13px;
+                            line-height: 30px;
+                            height: 0px;
+                            list-style-type: none;
+                            overflow: hidden;
+                            padding: 0px;
+    /*Animation*/
+                             transition: height 1s ease;
+                         }
+
+
+     .menu-item:hover ul {
+                                  height: 93px;
+                                }
+
+     .menu-item ul a {
+                             margin-left: 20px;
+                             text-decoration: none;
+                             color: #aaa;
+                             display: block;
+                             width: 120px;
+                           }
+
+     /*li Styles*/
+     .menu-item li {
+                          border-bottom: 1px solid #eee;
+                        }
+
+     .menu-item li:hover {
+                                 background: #eee;
+                                }
+
+     /*First Item Styles*/
+     .alpha p {
+                	padding: 8px 12px;
+                	color: #aaa;
+                }
+
+     .alpha p a {
+	                color: #aaa;
+                 	font-style: italic;
+                    }
+
+     .alpha p a:hover {
+	                         color: #ccc;
+                           }
+
+   /************************컨텐츠***************************/
+
+     #container {
+                     width:1200px;
+                     border: 4px solid #fff;
+                     /*background-color: tan;*/
+     }
+
+     #container::after { content:""; display:block; clear:both;}
+     
+     #content {
+                   float:left;
+                   width:852px;
+                   border:4px solid #fff;
+                   /*background-color: gold;*/
+     }
+
+     .intro {
+               position: relative;
+               width:844px;
+               height:482px;
+               /*background-color: cyan;*/
+     }
+
+     .wide_banner {
+                         width:844px;
+                         /*background-color: green*/
+                         position: relative;
+     }
+
+     .wide_banner .jas { 
+                               position:absolute;
+                               background-color: rgba(255, 255, 255, 0.6);
+                               width: 500px;
+                               height: 50px;
+                               padding-top: 10px;
+                               top:50px;
+                               left:50%;
+                               margin-left:-250px;
+                               text-align: center;
+                               transition:1.2s;
+     }
+
+     .wide_banner .jas:hover { 
+                                      background-color: #fff;
+                                      cursor: pointer;
+                                      transition:  1.5s;
+    }
+
+     /************************이미지 롤링 배너 모듈소스*************************/
+
+     #coverflow {
+                 width : 844px;
+                 height: 230px;
+                 padding-top: 45px;
+                 background-image : url("./images/bg_3.png");
+                 background-size: 20%;
+     }
+
+
+      /************************이미지 롤링 배너 모듈소스*************************/
+
+     .left_content { 
+                        float:left;
+                        width:452px;
+                        height:492px;
+                        border:4px solid #fff;
+                        /*background-color: tomato;*/
+     }
+
+     .right_content { 
+                          float:left;
+                          width:376px;
+                          height:492px;
+                          border:4px solid #fff;
+                          /*background-color: palevioletred;*/
+     }
+
+     .bottom_content {
+                             clear:both;
+                             width:836px;
+                             height:370px;
+                             border:4px solid #fff;
+                             /*background-color: orange;*/
+     }
+
+     #aside {
+                float:left;
+                width: 340px;
+                border:4px solid #fff;
+                /*background-color: pink;*/
+     }
+
+
+     .banner {
+                  width:332px;
+                  /*background-color: peru;*/
+     }
+     
+     .product {
+                  width: 332px;
+                  /*background-color: aquamarine;*/
+     }
+
+     .product2 {
+                    width:332px;
+     }
+
+     #footer {
+                 width:1200px;
+                 border: 4px solid #fff;
+                 /*background: tomato;*/
+     }
+
+     /*****************left & right side box*******************/
+
+    /* .left_banner {
+                       width:125px;
+                       height: 660px;
+                       background-color: cyan;
+                       position:absolute; top:110px; left:-150px;
+     }*/
+
+     .quick_menu {
+                        width:120px;
+                        height: 523px;
+                        position:fixed;  top:110px; 
+                        margin-left:1200px;
+     }
+
+     .quick_menu p {
+                           text-align: center;
+     }
+
+
+  </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="header">
+
+            <ul class="utility_menu">
+                <li><a href="#">장바구니&nbsp; </a> |</li>
+                <li><a href="#">&nbsp;마이 페이지&nbsp; </a> |</li>
+                <li><a href="#">&nbsp;찾아오시는 길&nbsp; </a> |</li>
+                <li><a href="#">&nbsp;사이트맵&nbsp;&nbsp; </a></li>
+            </ul>
+
+            <h1>
+                <a href="#top"><img src="./images/title_logo.png" alt="대표로고" width="230px"  ></a>
+            </h1>
+
+            <div id="search">
+                <span class="blue_window">
+                <input id="query" name="query" type="text" title="검색어 입력" 
+                class="input_text" tabindex="1" accesskey="s" onclick="document.getElementById('fbm').value=1;" />
+                </span>
+                <input type="image" alt="검색" src="./images/btn_sch_01.png" height="37" class="btn"/>
+            </div>
+
+            <div id="gnb_box">
+
+                <ul class="menu">
+
+                    <li><a href="#">MENU 1</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="setting">Setting</a></li>
+                            <li><a href="#" class="sharing">Sharing</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">MENU 2</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="setting">Setting</a></li>
+                            <li><a href="#" class="sharing">Sharing</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">MENU 3</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="setting">Setting</a></li>
+                            <li><a href="#" class="sharing">Sharing</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">MENU 4</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="setting">Setting</a></li>
+                            <li><a href="#" class="sharing">Sharing</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">MENU 5</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="setting">Setting</a></li>
+                            <li><a href="#" class="sharing">Sharing</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">LAST MENU 6</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="setting">Setting</a></li>
+                            <li><a href="#" class="sharing">Sharing</a></li>
+                        </ul>
+                    </li>
+                
+                
+                </ul> <!--menu end-->
+
+            </div><!--gnb_box end-->
+
+        </div><!--header end-->
+
+        <div id="container">
+
+            <div id="content">
+
+                <div class="intro">
+                    <video width="844" autoplay loop muted controls poster="./images/shot_1280x720.png"><source src="./video/Shot ( 1080p ).mp4">
+                    </video>
+               
+                    <nav class="menu_box">
+
+                        <div class="menu-item">
+                          <h3><a href="#">MENU 1</a></h3>
+                          <ul>
+                            <li><a href="#">SUB MENU 1</a></li>
+                            <li><a href="#">SUB MENU 2</a></li>
+                            <li><a href="#">SUB MENU 3</a></li>
+                          </ul>
+                        </div>
+                          
+                        <div class="menu-item">
+                          <h3><a href="#">MENU 2</a></h3>
+                          <ul>
+                            <li><a href="#">SUB MENU 1</a></li>
+                            <li><a href="#">SUB MENU 2</a></li>
+                            <li><a href="#">SUB MENU 3</a></li>
+                        </div>
+                          
+                        <div class="menu-item">
+                          <h3><a href="#">MENU 3</a></h3>
+                          <ul>
+                            <li><a href="#">SUB MENU 1</a></li>
+                            <li><a href="#">SUB MENU 2</a></li>
+                            <li><a href="#">SUB MENU 3</a></li>
+                          </ul>
+                        </div>
+            
+                        <div class="menu-item">
+                            <h3><a href="#">MENU 4</a></h3>
+                            <ul>
+                            <li><a href="#">SUB MENU 1</a></li>
+                            <li><a href="#">SUB MENU 2</a></li>
+                            <li><a href="#">SUB MENU 3</a></li>
+                            </ul>
+                         </div>    
+            
+                         <div class="menu-item">
+                             <h3><a href="#">MENU 5</a></h3>
+                            <ul>
+                             <li><a href="#">SUB MENU 1</a></li>
+                             <li><a href="#">SUB MENU 2</a></li>
+                             <li><a href="#">SUB MENU 3</a></li>
+                             </ul>
+                         </div>    
+            
+                    </nav><!--menu_box end-->
+
+                </div> <!--intro end-->
+
+                <div class="wide_banner">
+                    <!--<img src="./images/650x120_01.png" width="844" alt="와이드배너">-->
+
+                    <script>
+                    var img_spin=new Date();
+                    var now_sec=img_spin.getSeconds();  //getSeconds (); 메소드는 0~59초 숫자 정보 변환
+                    
+                    
+                    if (now_sec>=50) {
+                                             document.write("<img src='./images/wideBanner_01.png' width='844' alt='이미지1'>");
+                                                }  
+                   else if (now_sec>=40) {
+                                            document.write("<img src='./images/wideBanner_02.png' width='844' alt='이미지2'>");
+                                                }  
+                   else if (now_sec>=30) {
+                                            document.write("<img src='./images/wideBanner_03.png' width='844' alt='이미지3'>");
+                                                }  
+                   else if (now_sec>=20) {
+                                            document.write("<img src='./images/wideBanner_04.png' width='844' alt='이미지4'>");
+                                                }  
+                   else if (now_sec>=10) {
+                                            document.write("<img src='./images/wideBanner_05.png' width='844' alt='이미지5'>");
+                                                }  
+                                      else {
+                                            document.write("<img src='./images/wideBanner_06.png' width='844' alt='이미지6'>");
+                                                }  
+
+                 </script>
+
+                 <p class="jas">[ F5 ] 새로 고침 -  배너 이미지가 10초마다 변경됩니다. <br> 자바스크립트 Date(); 객체의 getSecond(); 메소드를 응용하였습니다.</p>
+                 
+                </div> <!--wide_banner end-->
+
+                <!--이미지 롤링 배너 모둘박스-->
+
+            <div id="demo-default" class="demo banner_module">
+
+                <div id="coverflow">
+
+                        <ul class="flip-items">
+                
+                             <li data-flip-title="hgd_cgPortfolio_01">			    
+                                <img src="./images/nsy_banner_04.png" alt="베라1">		
+                             </li>
+                
+                             <li data-flip-title="hgd_cgPortfolio_02">
+                                <img src="./images/nsy_banner_05.png" alt="베라2">		
+                             </li>
+                
+                             <li data-flip-title="hgd_cgPortfolio_03">
+                                <img src="./images/nsy_banner_06.png" alt="베라3">		
+                             </li>
+                
+                             <li data-flip-title="hgd_cgPortfolio_03">
+                              <img src="./images/nsy_banner_07.png" alt="베라4">		
+                             </li>
+                
+                             <li data-flip-title="hgd_cgPortfolio_03">
+                               <img src="./images/nsy_banner_08.png" alt="베라5">
+                             </li>  
+                            
+                        </ul>
+                
+                </div> <!--coverflow end-->
+
+                <script>
+                    var coverflow = $("#coverflow").flipster();
+                </script>
+
+             </div> <!--demo-default end-->
+
+                <div class="left_content">
+                    <img src="./images/content_01.png" alt="왼쪽 배너" width="452" height="492">
+                </div> <!--left_content end-->
+            
+                <div class="right_content">
+                    <img src="./images/banner_07.png" alt="오른쪽 배너" width="380" height="492">
+                </div> <!--right_content end-->
+
+                <div class="bottom_content">
+                    <img src="./images/news.png" alt="뉴스 배너" width="836" height="340">
+                </div><!--bottom_content end-->
+
+            </div> <!--content end-->
+
+            <div id="aside">
+
+                    <form action="join.php" method="post">
+
+                        <fieldset class="login">
+                    
+                          <p><input type="text" id="user_id" size="20" maxlength="20" placeholder="아이디 입력"></p>
+                    
+                          <p><input type="password" id="user_number" size="20" maxlength="20" placeholder="비밀번호 입력"></p>
+
+                          <p id="login_btn"><a href="#">로그인</a></p>
+
+                          <input type="checkbox" id="login_ch" value="login_ch"><span id="login_ch2">&nbsp;로그인 상태 유지</span>
+
+                          <p class="id_under"><span id="id_2"><a href="#">아이디 칮기</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="number_2"><a href="#">비밀번호 찾기</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="member"><a href="#">회원가입</a></span></p>
+
+                        </fieldset>
+
+                    </form>
+
+                <div class="banner">
+                    <img src="./images/01-box.png" width="332" alt="배너">
+                </div>
+
+                <div class="product">
+                    <img src="./images/shopping_01.png" width="340" alt="리스트">
+                </div>
+
+                <div class="product2">
+                    <img src="./images/w332 image.png" width="332" height="130" alt="작은 배너">
+                </div>
+
+                <div class="video2">
+                    <video width="332" height="200" autoplay loop muted controls poster="./images/video2_intro.png"><source src="./video/fashion.mp4">
+                    </video>
+                </div>
+
+            </div> <!--aside end-->
+
+        </div><!--contatiner end-->
+
+        <div id="footer">
+            <img src="./images/footer_03.png" alt="푸터" width="1200">
+        </div> <!--footer end-->
+
+        <!--left & right side box-->
+
+        <!--<aside class="left_banner">
+            <img src="./images/left_banner.png" alt="왼쪽 사이드 배너">
+        </aside>-->
+
+        <aside class="quick_menu">
+            <p><a href="#top"><img src="./images/top_1.png" width="50"></a></p>
+            <img src="./images/quick_menu_3.png" alt="오른쪽 퀵메뉴" usemap="#quick">
+                                                                                                                 
+             <map id="#quick" name="#quick">
+            <!--<area shape="rect" coords="4, 81, 119, 157" href="#" target="_blank">-->
+            <area shape="rect" coords="22, 82, 102, 154" href="javascript:window.alert('홈 메뉴는 아직 준비중입니다.');">
+            <area shape="rect" coords="28, 176, 100, 241" href="javascript:window.alert('문서 메뉴는 아직 준비중입니다.');">
+            <area shape="rect" coords="25, 263, 94, 331" href="javascript:window.alert('공유 메뉴는 아직 준비중입니다.');">
+            <area shape="rect" coords="26, 347, 101, 415" href="javascript:window.alert('설정 메뉴는 아직 준비중입니다.');">
+            <area shape="rect" coords="25, 435, 98, 501" href="javascript:window.alert('더보기 메뉴는 아직 준비중입니다.');">
+             </map>
+
+            <p><a href="#footer"><img src="./images/down_01.png" width="50"></a></p>
+        </aside>
+
+
+
+    </div><!--wrapper end-->
+
+
+</body>
+</html>

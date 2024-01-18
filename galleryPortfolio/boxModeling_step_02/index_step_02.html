@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <title>남소영 - CSS 박스 모델링 프로토타입 웹페이지 시안</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="안녕하세요 남소영 프로토타입 포트폴리오입니다">
+
+  <style>
+
+      * { margin : 0; padding :0; }
+
+      body { 
+                font:12px/1.5 "맑은 고딕";
+                color:#222;
+               }
+
+     li { list-style-type : none; }    
+     
+     a {
+          color:#222;
+          text-decoration: none;
+        }
+
+    #header, #container, #content, #aside, #footer,#gnb_box {  box-sizing: border-box; }    
+
+    /************reset.css**************/
+    
+     #wrapper {
+                    width:1200px;
+                    margin:0 auto;
+                    height:900px;
+                    background-color: yellow;
+     }
+
+     #header {
+                   width:1200px;
+                   height :100px;
+                   border:4px solid #f00;
+                   background-color: cyan;;
+                   position:relative;
+                   z-index: 999;
+     }
+
+     /************유틸 메뉴 화면 우층 상단*************/
+
+     .utility_menu li {
+                        display:inline;
+     }
+
+     .utility_menu {    
+                         position:absolute;
+                         left:880px;
+                         top:10px;
+                         background-color: yellow;
+                
+                         padding-left:14px;
+     }
+
+     .utility_menu li a { color:#999;}
+     .utility_menu li a:hover { color:#00f;}
+
+     /*******************로고 자리*********************/
+
+     h1 {
+           float:left;
+           width:240px;
+           height:72px;
+           text-align:center;
+           background-color: lime;
+           margin-top:20px;
+     }
+
+     /*******************검색창*********************/
+
+     #search{
+                 position:absolute;
+                 top:5px;
+                 left:260px;
+                 z-index:1;
+                 width:612px;
+   	}
+
+     #search .blue_window{
+	                               display:inline-block;
+	                               width:388px;     /*_width :372px; */
+	                               height:26px;      /*_height :40px */;
+	                               border:7px solid #00f;
+	                               background-color:#fff
+	}
+       
+     #search .input_text {
+	                          width:373px;
+                              height:17px;
+                              line-height: 16px;
+                              margin:5px 0 0 6px;
+                              border:0 none;
+                              font-weight:bold;
+                              font-size:14px;
+                              color:#00f;
+	                          outline:none
+     }
+
+     #search .btn {
+                        margin-left:1px;
+                        position:relative;
+                        vertical-align:top;
+                        z-index:10;
+     } 
+
+     /***************************GNB***************************/
+
+     #gnb_box { 
+                    float:left;
+                    width:952px;
+                    height:72px;
+                    background-color: gold;
+                    padding-left:20px;
+                    padding-top:28px;
+                    margin-top:20px;
+     }
+
+
+     .menu,.menu ul,.menu li,.menu a {
+	                                             margin: 0;
+                                                 padding: 0;
+                                                 border: none;
+                                                 outline: none;
+     }
+
+     /******************** Menu *********************/
+
+     .menu {	
+	            height: 40px;
+                width: 700px;
+                background: #4c4e5a;
+                background: -webkit-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: -moz-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: -o-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: -ms-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                background: linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+               }    
+
+     .menu li {
+	             position: relative;
+	             list-style: none;
+                 float: left;
+                 display: block;
+                 height: 40px; 
+               }
+
+    /***************** Links ******************/
+
+     .menu li a {
+	                 display: block;
+                     padding: 0px 20px;
+                     margin: 6px 0;
+                     line-height: 28px;
+                     text-decoration: none;
+                     border-left: 1px solid #393942;
+                     border-right: 1px solid #4f5058;
+                     font-family: Helvetica, Arial, sans-serif;
+                     font-weight: bold;
+                     font-size: 13px;
+                     color: #f3f3f3;
+                     text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+                     -webkit-transition: color .2s ease-in-out;
+                     -moz-transition: color .2s ease-in-out;
+                     -o-transition: color .2s ease-in-out;
+                     -ms-transition: color .2s ease-in-out;
+                     transition: color .2s ease-in-out;
+                   }
+
+     .menu li:first-child a { border-left: none; }
+     .menu li:last-child a{ border-right: none; }
+     .menu li:hover > a { color: #8fde62; }
+
+    /*******************Sub Menu ******************/
+
+      .menu ul {
+	               position: absolute;
+	               top: 40px;
+                   left: 0;
+                   opacity: 0;
+                   background: #1f2024;
+                   -webkit-border-radius: 0 0 5px 5px;
+                   -moz-border-radius: 0 0 5px 5px;
+                   border-radius: 0 0 5px 5px;
+                   -webkit-transition: opacity .25s ease .1s;
+                   -moz-transition: opacity .25s ease .1s;
+                   -o-transition: opacity .25s ease .1s;
+                   -ms-transition: opacity .25s ease .1s;
+                   transition: opacity .25s ease .1s;
+                   }   
+
+     .menu li:hover > ul { opacity: 1; }
+
+     .menu ul li {
+                      height: 0;
+                      overflow: hidden;
+                      padding: 0;
+                      -webkit-transition: height .25s ease .1s;
+                      -moz-transition: height .25s ease .1s;
+                      -o-transition: height .25s ease .1s;
+                      -ms-transition: height .25s ease .1s;
+                      transition: height .25s ease .1s;
+                    }
+
+     .menu li:hover > ul li {
+                                   height: 36px;
+                                   overflow: visible;
+                                   padding: 0;
+                                  }
+
+     .menu ul li a {
+                    	width: 100px;
+                        padding: 4px 0 4px 40px;
+                        margin: 0;
+                        border: none;
+                        border-bottom: 1px solid #353539;
+                       }
+
+     .menu ul li:last-child a { border: none; }
+
+     /**********************Icons*********************** */
+
+     .menu a.documents { background: url(./images/docs.png) no-repeat 6px center; }
+     .menu a.messages { background: url(./images/bubble.png) no-repeat 6px center; }
+     .menu a.signout { background: url(./images/arrow.png) no-repeat 6px center; }
+ 
+
+     /***********************빨간 메뉴***************************/
+
+     .menu_box {
+                       display:block;
+                       position:absolute; top:10px; left:10px;
+                       font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+                       font-size: 13px;
+                       line-height: 1.5;
+                       margin: 0px auto;
+                       width: 200px;
+                       box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                     }
+
+     .menu-item {
+                      background: #fff;
+                      width: 200px; 
+                    }
+
+     /*Menu Header Styles*/
+     .menu-item h3 {
+                           border-bottom: 1px solid rgba(0,0,0,0.3);
+                           border-top: 1px solid rgba(255,255,255,0.2);
+                           color: #fff;
+                           font-size: 15px;
+                           font-weight: 500;
+                           padding: 7px 12px;
+     /*Gradient*/
+                           background: #a90329; /* Old browsers */
+                           background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
+                           background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* 삭제 금지 */
+                           background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ 삭제 금지 */
+                           }
+
+     .menu-item h3:hover {  
+                                     background: #cc002c; /* Old browsers */
+                                     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc002c), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+                                     background: -ms-linear-gradient(top,  #cc002c 0%,#6d0019 100%); /* IE10+ */
+                                      background: linear-gradient(top,  #cc002c 0%,#6d0019 100%); /* W3C */
+                                  }
+
+     .menu-item h3 a {
+                              color: white;
+                              display: block;
+                              text-decoration: none;
+                              width: 200px;
+                             }
+
+     /*ul Styles*/
+     .menu-item ul {
+                            background: #fff;
+                            font-size: 13px;
+                            line-height: 30px;
+                            height: 0px;
+                            list-style-type: none;
+                            overflow: hidden;
+                            padding: 0px;
+    /*Animation*/
+                             transition: height 1s ease;
+                         }
+
+
+     .menu-item:hover ul {
+                                  height: 93px;
+                                }
+
+     .menu-item ul a {
+                             margin-left: 20px;
+                             text-decoration: none;
+                             color: #aaa;
+                             display: block;
+                             width: 200px;
+                           }
+
+     /*li Styles*/
+     .menu-item li {
+                          border-bottom: 1px solid #eee;
+                        }
+
+     .menu-item li:hover {
+                                 background: #eee;
+                                }
+
+     /*First Item Styles*/
+     .alpha p {
+                	padding: 8px 12px;
+                	color: #aaa;
+                }
+
+     .alpha p a {
+	                color: #aaa;
+                 	font-style: italic;
+                    }
+
+     .alpha p a:hover {
+	                         color: #ccc;
+                           }
+
+   /************************컨텐츠***************************/
+
+     #container {
+                     width:1200px;
+                     border: 4px solid blue;
+                     background-color: tan;
+     }
+
+     #container::after { content:""; display:block; clear:both;}
+     
+     #content {
+                   float:left;
+                   width:852px;
+                   border:4px solid green;
+                   background-color: gold;
+     }
+
+     .intro {
+              position: relative;
+               width:844px;
+               height:360px;
+               background-color: cyan;
+     }
+
+     .wide_banner {
+                         width:844px;
+                         background-color: green;
+     }
+
+     .left_content { 
+                        float:left;
+                        width:492px;
+                        height:492px;
+                        border:4px solid olive;
+                        background-color: tomato;
+     }
+
+     .right_content { 
+                          float:left;
+                          width:336px;
+                          height:492px;
+                          border:4px solid tomato;
+                          background-color: palevioletred;
+     }
+
+     .bottom_content {
+                             clear:both;
+                             width:836px;
+                             height:292px;
+                             border:4px solid purple;
+                             background-color: orange;
+     }
+
+     #aside {
+                float:left;
+                width: 340px;
+                border:4px solid orange;
+                background-color: pink;
+     }
+
+     .login {
+               width:332px;
+               background-color: lime;
+     }
+
+     .banner {
+                  width:332px;
+                  background-color: peru;
+     }
+     
+     .product {
+                  width: 332px;
+                  background-color: aquamarine;
+     }
+
+     #footer {
+                 width:1200px;
+                 height:80px;
+                 border: 4px solid red;
+                 background: tomato;
+     }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="header">
+
+            <ul class="utility_menu">
+                <li><a href="#">장바구니 | </a></li>
+                <li><a href="#">마이 페이지 | </a></li>
+                <li><a href="#">찾아오시는 길 | </a></li>
+                <li><a href="#">사이트맵&nbsp;&nbsp; </a></li>
+            </ul>
+
+            <h1>
+                <a href="#"><img src="./images/logo-yong.png" alt="대표로고" width="110px"  ></a>
+            </h1>
+
+            <div id="search">
+                <span class="blue_window">
+                <input id="query" name="query" type="text" title="검색어 입력" class="input_text" tabindex="1" accesskey="s" onclick="document.getElementById('fbm').value=1;" />
+                </span>
+                <input type="image" alt="검색" src="./images/btn_sch.png" class="btn"/>
+            </div>
+
+            <div id="gnb_box">
+
+                <ul class="menu">
+
+                    <li><a href="#">My dashboard</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">Likes</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">Views</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">Uploads</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">Videos1</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">Videos2</a>
+                        <ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">Documents</a><ul>
+                            <li><a href="#" class="documents">Documents</a></li>
+                            <li><a href="#" class="messages">Messages</a></li>
+                            <li><a href="#" class="signout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                
+                </ul> <!--menu end-->
+
+            </div><!--gnb_box end-->
+
+        </div><!--header end-->
+
+        <div id="container">
+
+            <div id="content">
+
+                <div class="intro">
+                    <img src="./images/introVisualBox_07.png" width="844" alt="인트로 비주얼">
+
+                    <nav class="menu_box">
+
+                        <div class="menu-item">
+                          <h3><a href="#">YoonSemCom - Portfolio</a></h3>
+                          <ul>
+                            <li><a href="#">Web</a></li>
+                            <li><a href="#">Other</a></li>
+                            <li><a href="http://edyoon.tistory.com" target="_blank">[윤샘컴교실]</a></li>
+                          </ul>
+                        </div>
+                          
+                        <div class="menu-item">
+                          <h3><a href="#">About</a></h3>
+                          <ul>
+                            <li><a href="http://www.dbdb.pe.kr" target="_blank">www.dbdb.pe.kr</a></li>
+                            <li><a href="http://www.dbdb.pe.kr" target="_blank">www.dbdb.pe.kr</a></li>
+                            <li><a href="http://edyoon.tistory.com" target="_blank">edyoon.tistory.com</a></li>
+                          </ul>
+                        </div>
+                          
+                        <div class="menu-item">
+                          <h3><a href="#">iframe - sero menu</a></h3>
+                          <ul>
+                            <li><a href="#">Phone</a></li>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Location</a></li>
+                          </ul>
+                        </div>
+            
+                        <div class="menu-item">
+                            <h3><a href="#">iframe - sero menu</a></h3>
+                            <ul>
+                              <li><a href="#">Phone</a></li>
+                              <li><a href="#">Email</a></li>
+                              <li><a href="#">Location</a></li>
+                            </ul>
+                         </div>    
+            
+                         <div class="menu-item">
+                             <h3><a href="#">iframe - sero menu</a></h3>
+                            <ul>
+                             <li><a href="#">Phone</a></li>
+                             <li><a href="#">Email</a></li>
+                             <li><a href="#">Location</a></li>
+                             </ul>
+                         </div>    
+            
+                    </nav><!--menu_box end-->
+
+                </div> <!--intro end-->
+
+                <div class="wide_banner">
+                    <img src="./images/650x120_01.png" width="844" alt="와이드배너">
+                </div> <!--wide_banner end-->
+
+                <div class="left_content">
+                    left_content
+                </div> <!--left_content end-->
+
+                <div class="right_content">
+                    right_content
+                </div> <!--right_content end-->
+
+                <div class="bottom_content">
+                    bottom_content
+                </div><!--bottom_content end-->
+
+            </div> <!--content end-->
+
+            <div id="aside">
+                <div class="login">
+                    <img src="./images/login_ui_1.png" width="332" alt="로그인">
+                </div>
+                <div class="banner">
+                    <img src="./images/01-box.png" width="332" alt="배너">
+                </div>
+                <div class="product">
+                    <img src="./images/shopping_01.png" width="332" alt="리스트">
+                </div>
+            </div> <!--aside end-->
+        </div><!--contatiner end-->
+
+        <div id="footer">
+            footer
+        </div> <!--footer end-->
+
+
+    </div><!--wrapper end-->
+
+
+</body>
+</html>

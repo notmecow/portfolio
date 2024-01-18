@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>[남소영] WINE TAKE OUT SHOP</title>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="css/jquery.bxslider_03.css">
+
+<link rel="stylesheet" type="text/css" href="css/style_03.css">
+<link rel="shortcut icon" type="image/x-icon" href="./images/li_favicon_3.png" />
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js"></script>-->
+
+<script>
+
+$(function(){
+$("#wrapper").animate({opacity:0.9},1200);
+});	
+
+$(function() {
+        $('.slide_gallery').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true
+        });
+    });
+
+</script>
+
+<style>
+
+  hr { margin-top: 15px;}
+
+  #first_content_03 {
+                     width:500px;
+                     height:500px;
+                     margin:0 auto;
+                     margin-top: 60px;
+                     margin-bottom: 110px;
+                     position: relative;
+  }
+
+  /********************그림자**********************/
+
+  #shadow {
+                width:500px;
+                height: 520px;
+                background-color: #b6b3b3;
+                position:absolute;
+                top:20px;
+                left:25px;
+                z-index:-99;
+
+  }
+
+  /**********************로그인창**********************/
+
+    .login {
+             width:476px;
+             border:none;
+             background-color: #f0e6e3;
+             height:500px;
+             text-align: center;
+             margin:0 auto;
+     }
+
+     .login_txt {
+                     font-size: 30px;
+                     letter-spacing: 10px;
+                     font-weight: bold;
+     }
+
+     /****************** 아이디 / 비밀 번호 입력*******************/
+     
+     #user_id {
+               width:360px;
+               height:35px;
+
+               margin:0 auto; 
+               margin-top: 10px;
+              
+               /*border-radius: 20px;*/
+
+               background-color:#fff;
+               border: none;
+               padding-left:10px;
+               font-family: my_font1;
+     }
+
+     #user_number {
+                     width:360px;
+                     height:35px;
+
+                     margin:0 auto; 
+                     margin-top:10px;
+                     margin-bottom:16px;
+                    /* border-radius: 20px;*/
+                     background-color:#fff;
+                     border: none;
+                     padding-left:10px;
+                     font-family: my_font1;
+     }
+
+     /****************** 로그인 버튼 *******************/
+
+     #login_btn {
+                        width:370px;
+                        height:35px;
+                        /*border-radius: 20px;*/
+                        background-color:#333;
+                        border: none;
+                        margin:0 auto;
+                        margin-top: 10px;
+                        transition: 1s;
+                        font-size: 15px;
+                       color:#fff;
+                        line-height: 35px;
+      }
+
+    #login_btn:hover  {
+                  background-color:#ca6363;
+                  transition: 0.5s;
+                  cursor: pointer;
+      }    
+    
+      /****************** 로그인 상태 유지 *******************/
+
+     #login_ch { 
+                margin-top:19px;
+                margin-left:-5px;
+     }
+
+     #login_ch2 {
+                 margin-left:5px;
+                 margin-top:5px;
+     }
+
+     .id_under {
+                margin-left:60px;
+                margin-top:10px;
+                display:inline;
+     }
+
+      /****************** 아이디 찾기 / 비번 찾기 *******************/
+
+     #id_2 a:hover {
+                    color:#ca6363;
+     }
+
+     #number_2 a:hover {
+                          color:#ca6363;
+     }
+    
+     /****************** 회원가입  /  카카오  /  네이버 버튼 *******************/
+
+
+     .under_01      {
+                        width:370px;
+                        height:35px;
+                        background-color:#666;
+                        border: none;
+                        margin:0 auto;
+                        margin-top: 20px;
+                        transition: 1s;
+                        font-size: 15px;
+                          color:#fff;
+                          line-height: 35px;
+     }
+  
+     .under_01:hover {
+                            background-color: #ca6363;
+                            transition: 0.5s;
+                            cursor: pointer;
+     }
+
+     .under_02      {
+                        width:370px;
+                        height:35px;
+                        background-color:#fee500;
+                        border: none;
+                        margin:0 auto;
+                        margin-top: 15px;
+                        position: relative;
+                        transition: 0.5s;
+                        font-size: 15px;
+                        color:#080404;
+                        line-height: 35px;
+     }
+
+     .under_02 img {
+                           position:absolute;
+                           top:9px;
+                           left:20px;
+     }
+  
+
+     .under_03      {
+                        width:370px;
+                        height:35px;
+                        background-color:#00b900;
+                        border: none;
+                        margin:0 auto;
+                        margin-top: 15px;
+                        position:relative;
+                        transition: 0.5s;
+                        font-size: 15px;
+                         color:#fff;
+                          line-height: 35px;
+     }
+
+     .under_03 img {
+                           position:absolute;
+                           top:9px;
+                           left:24px;
+     }
+  
+
+     .under_02 span , .under_03 span { 
+                                                  position:absolute;
+                                                  top:0px;
+                                                  left:60px;
+     }
+
+     .under_02:hover {
+                            /* background-color:#fee500;*/                              
+                             background-color:#dac406;                                              
+     }
+
+     .under_03:hover {
+                              /*background-color:#00b900;*/                           
+                              background-color:#029602;                                            
+     }
+  
+</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<header>
+
+  <div id="logo"><h1><a href="index.html"><img src="images/li_mainlogo.png" width="120" alt="로고"></a></h1></div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="sub_01.html">BRAND</a></li>
+      <li><a href="sub_02.html">WINE</a></li>
+      <li><a href="sub_03.html">SHOP</a></li>
+
+    </ul>
+	<p class="utility">
+	<a href="sub_04.html">LOGIN</a><span>|</span>
+	<a href="sub_05.html">JOIN</a><span>|</span>
+	<a href="sub_04.html">MY PAGE</a>
+	</p>
+
+  <div class="takeout">
+    <p><a href="index.html">WINE TAKE OUT SHOP</a></p>
+ </div>
+ 
+   </nav>
+
+   <div id="search">
+    <span class="blue_window">
+    <input id="query" name="query" type="text" title="검색어 입력" 
+    class="input_text" placeholder="검색어를 입력하세요" maxlength="20" tabindex="1" accesskey="s" onclick="document.getElementById('fbm').value=1;" />
+    </span>
+    <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><input type="image" alt="검색" src="./images/li_search_btn.png" height="15" class="btn"/></a>
+   </div>
+
+</header>
+
+<hr width="1000" color="#000" noshade/>
+
+<!--------------------------갱신해야하는 컨텐츠들------------------------------>
+<section>
+    <div id="first_content_03">
+
+      <form action="join.php" method="post">
+
+        <fieldset class="login">
+
+          <p class="login_txt">LOGIN</p>
+    
+          <p><input type="text" id="user_id" size="20" maxlength="20" placeholder="아이디 입력"></p>
+    
+          <p><input type="password" id="user_number" size="20" maxlength="20" placeholder="비밀번호 입력"></p>
+
+          <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><p id="login_btn">로그인</p></a>
+
+          <input type="checkbox" id="login_ch" value="login_ch"><span id="login_ch2">&nbsp;로그인 상태 유지</span>
+
+          <!--
+          <p class="id_under"><span id="id_2"><a href="#">아이디 칮기</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="number_2"><a href="#">비밀번호 찾기</a></span></p>
+          <p class="under_01"><a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');">회원가입</a></p>
+          <p class="under_02"><img src="./images/icon_6.png" width="20"><span>|</span><a href="#">카카오로 로그인 하기</a></p>
+          <p class="under_03"><img src="./images/icon_7.png" width="15"><span>|</span><a href="#">네이버로 로그인 하기</a></p>
+          -->
+
+          <p class="id_under"><span id="id_2"><a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');">아이디 칮기</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="number_2"><a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');">비밀번호 찾기</a></span></p>
+          <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><p class="under_01">회원가입</p></a>
+          <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><p class="under_02"><img src="./images/icon_6.png" width="20"><span>|</span>카카오로 로그인 하기</p></a>
+          <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><p class="under_03"><img src="./images/icon_7.png" width="15"><span>|</span>네이버로 로그인 하기</p></a>
+
+
+        </fieldset>
+
+    </form>
+        
+      <div id="shadow">
+      </div>
+
+    </div>
+</section> 
+
+
+<!--------------------------footer------------------------------>
+<footer>
+	  <p>
+      상호명 : 리틀 와인 ｜ 서울특별시 강서구 공항대로 00길 00로 000-000<br>
+      대표 : 남소영 ｜ 사업자 등록번호 : 111-22-333333｜ 통신판매 신고번호 : 제 2018-서울강서-0000호｜ 개인정보 보호책임자 : 남소영<br>
+      Tel : 070-1234-5678｜ Fax : 02-1234-5678｜ e-mail : littlewine@abcd.com<br><br>
+      Copyright &copy; NamSoYoung. All Rights Reserved.
+	  </p>
+</footer>
+
+<aside class="quick">
+  <p><a href="javascript:;" onclick="kakao();"><img src="./images/icon_15.png" width="100"></a></p>
+</aside>
+
+</div><!--wrapper end-->
+
+<script>
+
+  function kakao() {
+  
+      window.open("https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_EDxilj%2Fchat%3Fapi_ver%3D1.0%26kakao_agent%3Dsdk%252F1.41.5%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fyournakedcheese.com%26app_key%3D822688d7c13605df94ee677055fcbc22%26referer%3Dhttps%253A%252F%252Fyournakedcheese.com%252Fgift" , 'window', 'width=500, height=600, menubar=no, status=no, top=200, left=710 toolbar=no');  
+  }
+  
+  </script>
+
+</body>
+</html>

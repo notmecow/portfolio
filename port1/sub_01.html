@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>[남소영] WINE TAKE OUT SHOP</title>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="css/jquery.bxslider_03.css">
+
+<link rel="stylesheet" type="text/css" href="css/style_03.css">
+<link rel="shortcut icon" type="image/x-icon" href="./images/li_favicon_3.png" />
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js"></script>-->
+
+<script>
+
+$(function(){
+$("#wrapper").animate({opacity:0.9},1200);
+});	
+
+$(function() {
+        $('.slide_gallery').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true
+        });
+    });
+
+</script>
+
+<style>
+
+/******************첫번째 컨텐츠************************/
+
+  #first_01 { 
+            position: relative;
+  }
+ 
+  #first_content_01 { 
+                    width:1000px;
+                    height:390px;
+                    background-image: url(./images/li_video_intro.png);
+                   /* position: relative;*/
+                    backdrop-filter: blur (7px);
+                    margin-top: 30px;
+  }
+
+  #first_01 video { 
+                   width:100%;
+                   height: 100%;
+                   position:absolute;
+                   backdrop-filter: blur(7px);
+                   top:0;
+                   left:0;
+                }
+
+  #first_txt { 
+             width:1000px;
+             height:270px;
+             background-color: rgba(255,255,255,0.8);
+
+             position:absolute;
+             top:60px;
+             left:0;
+
+  }
+
+  .welcome {
+               text-align: center;
+               font-size: 25px;
+               font-weight: bold;
+  }
+
+  .welcome_p {
+                               text-align: center;
+                               line-height: 40px;
+                               font-size: 15px;
+  }
+
+ /******************두번째 컨텐츠************************/
+  
+  #second_content_01 {
+                     width:1000px;
+                     /*height:550px;*/
+                     margin-top: 60px;
+                     /*background-color:cyan;*/
+  }
+
+ .identity { 
+              float:left;
+              width:160px;
+              height: 150px;
+              padding-left:40px;
+              /*background-color: palegoldenrod;*/
+ }
+
+ .identity_p { 
+                 float:left;
+                 width:760px;
+                 height: 150px;
+                 /*background-color: rgb(212, 138, 124);*/
+                 line-height: 30px;
+                 padding-left: 40px;
+               
+ }
+
+ .enjoy { 
+            clear:both;
+            float:left;
+            width:160px;
+            height: 150px;
+            padding-left:40px;
+            /*background-color: rgb(181, 238, 170);*/
+ }
+
+ .enjoy_p { 
+              float:left;
+              width:760px;
+              height: 150px;
+              /*background-color: rgb(155, 124, 212);*/
+              line-height: 30px;
+              padding-left: 40px;
+ }
+
+ .special { 
+              clear:both;
+              float:left;
+              width:160px;
+              height: 150px;
+              padding-left:40px;
+              /*background-color: rgb(238, 170, 198);*/
+ }
+
+ .special_p { 
+              float:left;
+              width:760px;
+              height: 150px;
+              /*background-color: rgb(158, 197, 248);*/
+              line-height: 30px;
+              padding-left: 40px;
+ }
+
+  
+</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<header>
+
+  <div id="logo"><h1><a href="index.html"><img src="images/li_mainlogo.png" width="120" alt="로고"></a></h1></div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="sub_01.html">BRAND</a></li>
+      <li><a href="sub_02.html">WINE</a></li>
+      <li><a href="sub_03.html">SHOP</a></li>
+
+    </ul>
+	<p class="utility">
+        <a href="sub_04.html">LOGIN</a><span>|</span>
+        <a href="sub_05.html">JOIN</a><span>|</span>
+        <a href="sub_04.html">MY PAGE</a>
+	</p>
+
+  <div class="takeout">
+    <p><a href="index.html">WINE TAKE OUT SHOP</a></p>
+ </div>
+ 
+   </nav>
+
+   <div id="search">
+    <span class="blue_window">
+    <input id="query" name="query" type="text" title="검색어 입력" 
+    class="input_text" placeholder="검색어를 입력하세요" maxlength="20" tabindex="1" accesskey="s" onclick="document.getElementById('fbm').value=1;" />
+    </span>
+    <a href="javascript:alert('이 사이트는 프로토타입 디자인 시안입니다.');"><input type="image" alt="검색" src="./images/li_search_btn.png" height="15" class="btn"/></a>
+   </div>
+
+</header>
+
+<!--------------------------갱신해야하는 컨텐츠들------------------------------>
+
+<section id="first_01">
+
+    <div id="first_content_01">
+        <video width="700" autoplay loop muted  poster="./images/li_video_intro.png"><source src="./video/wine.mp4">
+        </video>
+    </div>
+
+    <div id="first_txt">
+    <p class="welcome">Welcome to LITTLE WINE </p>
+    <p class="welcome_p">
+     원하는 맛이나 분위기에 따라 와인을 추천해드립니다.<br>
+     와인을 밀폐용기에 소분해서 원하시는 만큼 제공합니다.<br>
+     생일이나 기념일에 맞게 특별한 패키징을 선사합니다.<br>
+     와인과 함께하는 선물 같은 하루를 선물합니다.</p>
+    </div>
+
+</section> 
+
+
+
+<section id="second_content_01">
+    <div id="feature_1">
+        <div class="identity">
+        <h2>IDENTITY</h2>
+        </div>
+        <div class="identity_p">
+        <p>리틀 와인은 경험을 선물합니다.<br>
+            여느 와인 판매점들처럼 종류가 다양하며 , 원하는 만큼만 구매가 가능하여 다양한 와인을 경험해볼 수 있습니다.
+         </p>
+        </div>
+    </div>
+
+    <div id="feature_2">
+        <div class="enjoy">
+        <h2>ENJOY</h2>
+        </div>
+        <div class="enjoy_p">
+         <p>리틀 와인은 모두를 생각합니다.<br>
+         와인을 즐기고자 하는 모든 분들을 위해 와인 스토리에 대한 큐레이션, 와인에 어울리는 안주 추천 서비스 , 와인 구독 서비스를 제공합니다.
+         </p>
+         </div>
+        </div>
+
+    <div id="feature_3">       
+         <div class="special"> 
+         <h2>SPECIAL</h2>
+         </div>
+         <div class="special_p">
+         <p>리틀 와인은 특별함을 제공합니다.<br>
+         버려지는 와인병과 코르크를 재활용한 소품을 만들어 다양한 와인 패키징에 사용하고 있습니다.
+        </p>
+        </div>
+    </div>
+
+</section><!--second_content_01 end-->
+
+
+<!--------------------------footer------------------------------>
+<footer>
+    <p>
+      상호명 : 리틀 와인 ｜ 서울특별시 강서구 공항대로 00길 00로 000-000<br>
+	  대표 : 남소영 ｜ 사업자 등록번호 : 111-22-333333｜ 통신판매 신고번호 : 제 2018-서울강서-0000호｜ 개인정보 보호책임자 : 남소영<br>
+	  Tel : 070-1234-5678｜ Fax : 02-1234-5678｜ e-mail : littlewine@abcd.com<br><br>
+	  Copyright &copy; NamSoYoung. All Rights Reserved.
+        </p>
+</footer>
+
+<aside class="quick">
+    <p><a href="javascript:;" onclick="kakao();"><img src="./images/icon_15.png" width="100"></a></p>
+</aside>
+
+</div><!--wrapper end-->
+
+<script>
+
+    function kakao() {
+    
+        window.open("https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_EDxilj%2Fchat%3Fapi_ver%3D1.0%26kakao_agent%3Dsdk%252F1.41.5%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fyournakedcheese.com%26app_key%3D822688d7c13605df94ee677055fcbc22%26referer%3Dhttps%253A%252F%252Fyournakedcheese.com%252Fgift" , 'window', 'width=500, height=600, menubar=no, status=no, top=200, left=710 toolbar=no');  
+    }
+    
+    </script>
+
+</body>
+</html>

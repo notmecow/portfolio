@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>넷플릭스 TOP</title>
+    <link rel="stylesheet" href="./css/styles_01.css">
+</head>
+<body>
+
+
+
+<div class="slider">
+
+	<a href="#" id="previous"><img src="./images/left_btn_02.png"  width="30" alt="이전 이미지"></a>
+
+	<div id="slider-inner">
+		<ul>
+			<li><img src="images/poster_1.png"  alt="포스터1"></li>
+			<li><img src="images/poster_2.png"  alt="포스터2"></li>
+			<li><img src="images/poster_3.png" alt="포스터3"></li>
+			<li><img src="images/poster_4.png"  alt="포스터4"></li>
+			<li><img src="images/poster_5.png"  alt="포스터5"></li>
+			<li><img src="images/poster_6.png" alt="포스터6"></li>
+			<li><img src="images/poster_7.png"  alt="포스터7"></li>
+			<li><img src="images/poster_8.png"  alt="포스터8"></li>
+			<li><img src="images/poster_9.png"  alt="포스터9"></li>
+			<li><img src="images/poster_10.png" alt="포스터10"></li>
+		</ul>
+  </div>
+
+  <a href="#" id="next"><img src="./images/right_btn_02.png" width="30" alt="다음 이미지"></a>
+  
+</div>
+    
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/slider.jquery.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#slider-inner').slider('#previous', '#next');
+        });
+    </script>
+
+</body>
+</html>
